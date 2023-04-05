@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var a = "hello friends";  
+function first(){
+    var b = " i am mahesh";
+    second();
+
+    function second(){
+        var c = " i am happy";             
+        document.writeln(a+b+c);
+        third();      // this is scope chain to access second function to globle variable value.
+    }
+}
+    function third(){          //this is outer function
+    var d = " i am mahesh";   // outer function is not enter any other function because his not permission to enter
+    console.log(a+b+c+d);           //that why b is not define and output not show
+}
+
+first();
+
+    </script>
+    
+</body>
+</html>

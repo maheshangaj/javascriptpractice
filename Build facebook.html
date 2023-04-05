@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const database=[{
+
+    username: "mahesh",
+    password : "angaj",
+}
+]
+let status=[{
+    name:'the mahi',
+    status: 'plz like all video',
+},
+{
+    name: 'the ramu',
+    status:'plz subscribs video',
+}, ]
+const username = prompt("plz enter user name");
+const password= prompt("plz enter password");
+
+const Output = (user,pass)=>{
+    if(user===database[0].username && pass===database[0].password)
+    {
+        console.log(status);      //result show only console because in array
+    //     for (let value of status){                        //for sepret show onlyuse this code
+    //     console.log(value)
+    // } 
+    }else{
+        alert('plz enter valid name and password')}
+}
+Output(username,password);
+
+
+    </script>
+    
+</body>
+</html>

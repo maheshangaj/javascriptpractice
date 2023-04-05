@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const thapa={
+        //     name:"mahesh",
+        //     qualif:"engg",
+        //     sum:function(){
+        //         var add=3+4;
+        //         console.log("addition of two no.is"+add);
+        //         console.log(this);
+        //     }
+        // }
+        // thapa.sum();
+
+
+        //In regular function this refers to the global boject
+        const thapa={
+            name:"mahesh",
+            qualif:"engg",
+            sum:function(){
+                var add=3+4;
+                console.log("addition of two no.is = "+add);
+                console.log(this);
+                function child(){
+                    var name= "thapa";
+                    console.log("mynameis : "+name);  
+                    console.log(this);  //--> refers to global object
+                }
+                child();
+            }
+        }
+        thapa.sum();
+
+        
+    </script>
+</body>
+</html>

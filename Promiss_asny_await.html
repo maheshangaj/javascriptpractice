@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fun1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          let rollno = [1, 2, 3, 4, 5];
+          resolve(rollno);
+          //   reject("rjected while comunication");
+        }, 2000);
+      });
+      const getbio = (indexdata) => {
+        return new Promise((resolve, reject) => {
+          setTimeout(
+            (indexdata) => {
+              let biodata = {
+                name: "mahesh",
+                age: 30,
+              };
+              resolve(
+                `the name is${biodata.name} and the age is ${biodata.age}`
+              );
+            },
+            2000,
+            indexdata
+          );
+        });
+      };
+      async function getdata() {
+        const rolldata = await fun1;
+        console.log(rolldata);
+        const deatils = await getbio();
+        console.log(deatils);
+      }
+      getdata();
+    </script>
+  </body>
+</html>

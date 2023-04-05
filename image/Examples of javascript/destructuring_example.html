@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const game = {
+        team1: "byeran munachi",
+        team2: "borissa Dortmunt",
+        plyers: [
+          [
+            "ramesh",
+            "suresh",
+            "jayesh",
+            "madhav",
+            "ganesh",
+            "vikesh",
+            "rajesh",
+            "manoj",
+            "dipesh",
+            "omkar",
+            "shubham",
+          ],
+          [
+            "jon",
+            "ram",
+            "sham",
+            "amit",
+            "swapnil",
+            "shankar",
+            "swapna",
+            "sujit",
+            "konya",
+            "yogesh",
+            "ashish",
+          ],
+        ],
+        score: "4.0",
+        scored: ["dipesh", "omkar", "dipesh", "shankar"],
+        date: "decmber 15 2022",
+        odds: {
+          team1: 11.33,
+          x: 3.25,
+          team2: 6.5,
+        },
+      };
+      const [plyers1, plyers2] = game.plyers;
+      // console.log(plyers1, plyers2);
+      const [gk, ...fieldplayers] = plyers1;
+      // console.log(gk, fieldplayers);
+      const {
+        odds: { team1, x: draw, team2 },
+      } = game;
+      // console.log(team1, draw, team2);
+      const plyersgole = function (...plyers) {
+        // console.log(plyers);
+        // console.log(`  ${plyers.length} over all goles`);
+      };
+      plyersgole(...game.scored); //if scored name incressthen gole value incress
+      team1 < team2 && console.log("team 2 is win the match");
+      team1 > team2 && console.log("team 1 is win the match"); //team 1 value high so win output
+    </script>
+  </body>
+</html>

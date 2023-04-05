@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script> //using simple method
+
+        var i= 1;
+        while(i<=100){
+             if((i%5)==0 &&(i%3)==0){
+                document.writeln("fizzbuzz")
+            }
+            else if((i % 3) == 0){
+                document.writeln("fizz");
+            }
+            else if((i%5)==0){
+                document.writeln("bizz");
+            }
+            else{
+            document.writeln(i);}
+            i++;
+            document.writeln("<br>");  
+        }
+    </script> -->
+
+    <script> // using array to slove 
+    
+var fizbuzz=[]
+        var i= 1;
+        function fizbuzzs(){
+        while(i<=100){
+             if((i%5)==0 &&(i%3)==0){
+                fizbuzz.push("fizzbuzz")
+            }
+            else if((i % 3) == 0){
+                fizbuzz.push("fizz");
+            }
+            else if((i%5)==0){
+                fizbuzz.push("bizz");
+            }
+            else{
+                fizbuzz.push(i);
+            }
+            
+            i++;
+
+        }
+        
+        document.writeln(fizbuzz); 
+
+    }
+    fizbuzzs();
+    
+    </script>
+</body>
+</html>

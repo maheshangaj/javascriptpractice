@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // simple example
+
+      //   const promissObj1 = new Promise((resole, reject) => {
+      //     let req = true;
+      //     if (req == true) {
+      //       resole([1, 2, 3, 4, 5]);
+      //     } else {
+      //       reject("the request rejected");
+      //     }
+      //   }).then(
+      //     (value) => {
+      //       console.log(value);
+      //     },
+      //     (error) => {
+      //       console.log(error);
+      //     }
+      //   );
+
+      // adding value 10+ 10
+
+      const objectNum = new Promise((resole, reject) => {
+        let num = 10;
+        resole(num);
+      })
+        .then((value) => {
+          console.log(value);
+          return value + 10;
+        })
+        .then((value) => {
+          console.log(value);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dom1.css" />
+    
+  </head>
+  <body>
+    <header>
+      <button class="btn again" style="font-size: 50px">Again!</button>
+      <p class="between" style="font-size: 30px; text-align: right;padding-right : 50px;">
+        (between 1 and 20)
+      </p>
+      <h1>Guess My Number!</h1>
+      
+      
+      <div class="number" style="font-size: 120px; text-align: center;">?</div>
+    </header>
+    <main>
+      <section class="left">
+        <input
+          type="number"
+          class="guess"
+          style="font-size: 50px; text-align: center"
+        />
+        <br></br>
+        <button class="btn check" style="width:200px ;height: 50px; border-radius: 2px solid black;">check!</button>
+      </section>
+      <section class="right">
+        <p class="message" style="font-size: 50px">start guessing..</p>
+        <p class="lebel-score" style="font-size: 50px">
+          score: <span class="score">20</span>
+        </p>
+        <p class="lebel-highscore" style="font-size: 50px">
+          Highscore: <span class="highscore" style="font-size: 50px">0</span>
+        </p>
+      </section>
+    </main>
+    <script src="dom1.js"></script>
+    
+  </body>
+</html>

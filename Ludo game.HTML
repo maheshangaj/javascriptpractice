@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Ludo game.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JS LUDO</h1>
+        <div class="dies1">
+            <p>player 1</p>
+            <img src="image/dies1.jpg" id="check1" style="width:250px ;height:250px;">
+        </div>
+        <div class="dies1">
+            <p>player 2</p>
+            <img src="image/dies1.jpg" id="check2" style="width:250px ;height:250px;">
+        </div>
+        <div>
+            <button onclick="ludogame()">click</button>
+        </div>
+    </div>
+    <script>
+        ludogame = () => {
+            const play1 = Math.floor(Math.random() * 6) + 1;                 // random no aaal pahije 1 to 6
+            const play1dies = `image/dies${play1}.jpg`;
+            document.getElementById('check1').setAttribute('src',           //img change sathi id create karun setattribute use kelay 
+                play1dies);
+
+            const play2 = Math.floor(Math.random() * 6) + 1;
+            const play2dies = `image/dies${play2}.jpg`;
+            document.getElementById('check2').setAttribute('src',
+                play2dies);
+            if (play1 > play2) {
+                document.querySelector('h1').innerHTML = "player1 won";
+            } else if (play1 < play2) {
+                document.querySelector('h1').innerHTML = "player2 Won";
+            } else {
+                document.querySelector('h1').innerHTML = "Draw";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

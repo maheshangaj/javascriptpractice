@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // to find even numbers
+      //   let Arry = [1, 2, 4, 8, 5, 10, 16, 30];
+      //   let even = Arry.filter((n) => {
+      //     return n % 2 == 0;
+      //   });
+      //   console.log(even);
+
+      // using filter method to find duplicate number
+
+      //   let Arry = [1, 2, 3, 1, 5, 2, 3, 4, 6, 8, 6, 8];
+      //   let same = Arry.filter((item, index) => index !== Arry.indexOf(item));
+      //   console.log(same);
+
+      // find age can vote
+
+      //   function canvote(age) {
+      //     return age >= 18;
+      //   }
+      //   var filterd = [2, 16, 28, 44, 25].filter(canvote);
+      //   console.log(filterd);
+
+      //   let transection = [1000, 2000, 5000, -829, 500, -625, -154];
+      //   let diposited = transection.filter((value) => {
+      //     return value > 0;
+      //   });
+      //   console.log(diposited);
+
+      let transection = [1000, 2000, 5000, 500];
+      let diposited = transection
+        .filter((value) => {
+          return value > 0;
+        })
+        .reduce((acc, index) => {
+          let val = index + acc;
+          return val;
+        });
+      console.log(diposited);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const function1 = () => {
+        let rollno = [1, 2, 3, 4];
+        setTimeout(
+          (rollno) => {
+            console.log(rollno[1]);
+            let biodata = {
+              name: "mahesh",
+              age: 30,
+            };
+            setTimeout(() => {
+              console.log(
+                `rol no is ${rollno} the name is ${biodata.name} and age  ${biodata.age}`
+              );
+              setTimeout(() => {
+                biodata.gender = "male";
+                console.log(
+                  `rol no is ${rollno} the name is ${biodata.name} and age  ${biodata.age} and gender is ${biodata.gender}`
+                );
+              }, 2000);
+            }, 2000);
+          },
+          2000,
+          rollno[1]
+        );
+      };
+      function1();
+    </script>
+  </body>
+</html>
